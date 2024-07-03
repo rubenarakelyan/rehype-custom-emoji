@@ -1,6 +1,6 @@
 {
   "name": "@rubenarakelyan/rehype-custom-emoji",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "type": "module",
   "engines": {
     "node": ">=18"
@@ -36,6 +36,8 @@
     "url": "https://github.com/rubenarakelyan/rehype-custom-emoji.git"
   },
   "keywords": [
+    "astro-component",
+    "ui",
     "custom emoji",
     "emoji",
     "rehype",

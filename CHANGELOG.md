@@ -1,5 +1,9 @@
 # @rubenarakelyan/rehype-custom-emoji
 
+## 1.0.3
+
+* Add keywords to be picked up by Astro Integrations library
+
 ## 1.0.2
 
 * Fix importing of `global.css` (again)

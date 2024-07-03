@@ -41,7 +41,7 @@
   "files": [
     "index.d.ts",
     "index.js",
-    "LICENSE"
+    "global.css"
   ],
   "author": "Ruben Arakelyan <ruben@arakelyan.uk>",
   "license": "MIT",

@@ -1,6 +1,6 @@
 {
   "name": "@rubenarakelyan/rehype-custom-emoji",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "engines": {
     "node": ">=18"
@@ -11,6 +11,11 @@
       "import": {
         "types": "./index.d.ts",
         "default": "./index.js"
+      }
+    },
+    "global.css": {
+      "import": {
+        "default": "./global.css"
       }
     }
   },

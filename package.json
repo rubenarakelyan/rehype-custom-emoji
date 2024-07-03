@@ -1,0 +1,82 @@
+{
+  "name": "@rubenarakelyan/rehype-custom-emoji",
+  "version": "1.0.0",
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "description": "Declare and use custom emoji",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./index.d.ts",
+        "default": "./index.js"
+      }
+    }
+  },
+  "scripts": {
+    "eslint": "eslint '*.ts' eslint.config.mjs",
+    "prettier": "prettier -c '*.ts' eslint.config.mjs",
+    "tsc-eslint": "tsc --pretty -p tsconfig.eslint.json",
+    "lint": "concurrently -c auto npm:eslint npm:prettier npm:tsc-eslint",
+    "build": "tsc --pretty -p . -d",
+    "watch": "tsc -w -p .",
+    "format": "prettier -w '*.ts' eslint.config.mjs",
+    "mocha": "mocha --color test.js",
+    "test": "concurrently -m 1 -c auto npm:build npm:mocha",
+    "prepare": "concurrently -m 1 -c auto npm:lint npm:build npm:test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rubenarakelyan/rehype-custom-emoji.git"
+  },
+  "keywords": [
+    "custom emoji",
+    "emoji",
+    "rehype",
+    "plugin",
+    "rehype-plugin"
+  ],
+  "types": "index.d.ts",
+  "files": [
+    "index.d.ts",
+    "index.js",
+    "LICENSE"
+  ],
+  "author": "Ruben Arakelyan <ruben@arakelyan.uk>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rubenarakelyan/rehype-custom-emoji/issues"
+  },
+  "homepage": "https://github.com/rubenarakelyan/rehype-custom-emoji#readme",
+  "dependencies": {
+    "@types/hast": "^3.0.4",
+    "hast-util-find-and-replace": "^5.0.1",
+    "hast-util-raw": "^9.0.4",
+    "unified": "^11.0.5"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.6.0",
+    "@types/eslint__js": "^8.42.3",
+    "@types/eslint-config-prettier": "^6.11.3",
+    "@types/eslint-plugin-mocha": "^10.4.0",
+    "@types/eslint-plugin-security": "^3.0.0",
+    "@types/mocha": "^10.0.7",
+    "@types/node": "^20.14.9",
+    "concurrently": "^8.2.2",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-mocha": "^10.4.3",
+    "eslint-plugin-n": "^17.9.0",
+    "eslint-plugin-security": "^3.0.1",
+    "mocha": "^10.6.0",
+    "prettier": "^3.3.2",
+    "rehype": "^13.0.1",
+    "rehype-autolink-headings": "^7.1.0",
+    "rehype-sanitize": "^6.0.0",
+    "rehype-slug": "^6.0.0",
+    "rehype-stringify": "^10.0.0",
+    "typescript": "^5.5.3",
+    "typescript-eslint": "^7.15.0"
+  }
+}
